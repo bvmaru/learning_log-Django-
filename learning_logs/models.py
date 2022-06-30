@@ -19,4 +19,7 @@ class Entry(models.Model):
 
 	def __str__(self):
 		"""Zwraca reprezentację modelu w postaci ciągu tekstoewgo"""
-		return f"{self.text[:50]}..."
+		if len(self.text) > 50:
+			return f"{self.text[:50]}..."
+		else:
+			return self.text
