@@ -7,4 +7,6 @@ app_name = 'learning_logs'
 urlpatterns = [
     #Strona główna
     path('', views.index, name='index'),
+    #Wyswietlenie wszystkich tematów
+    path('topics/', views.topics, name='topics'),
 ]
